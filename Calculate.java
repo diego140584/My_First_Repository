@@ -4,6 +4,8 @@ System.out.println("Calculate...");
 int first = Integer.valueOf(args[0]);
 int second = Integer.valueOf(args[1]);
 int summ = first + second;
+int multiplication = first * second;
 System.out.println("The summ is " + summ);
+System.out.println("The multiplication is " + multiplication);
 }
 }

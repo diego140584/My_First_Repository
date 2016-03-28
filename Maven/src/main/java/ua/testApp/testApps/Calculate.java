@@ -6,6 +6,35 @@ import java.util.Scanner;
 
 public class Calculate {
     private int result = 0;
+
+    /**
+     *
+     * @param o
+     * @return
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Calculate calculate = (Calculate) o;
+
+        if (result != calculate.result) return false;
+        if (num != calculate.num) return false;
+        if (action != null ? !action.equals(calculate.action) : calculate.action != null) return false;
+        return scanner != null ? scanner.equals(calculate.scanner) : calculate.scanner == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result1 = result;
+        result1 = 31 * result1 + num;
+        result1 = 31 * result1 + (action != null ? action.hashCode() : 0);
+        result1 = 31 * result1 + (scanner != null ? scanner.hashCode() : 0);
+        return result1;
+    }
+
     private int num = 0;
     String action = "no";
 

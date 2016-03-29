@@ -16,14 +16,16 @@ public class Clinic {
     char choice;
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    public void addVisitors() throws IOException
+
+    public void addVisitors()
 
     {
         while (true) {
-
-            System.out.println("Enter your Name");
+            System.out.println("Enter your FirstName");
             try {
                 name = br.readLine();
+            } catch (NullPointerException e) {
+                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -58,13 +60,18 @@ public class Clinic {
             System.out.println("Enter your pets age");
             try {
                 petsAge = Integer.parseInt(br.readLine());
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
+
             System.out.println("Enter your pets weight");
             try {
                 petsWeight = Double.parseDouble(br.readLine());
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -73,14 +80,31 @@ public class Clinic {
 
             peoples.add(people1);
 
-            System.out.println("add another visitor - y, exit - n");
-            choice = (char) System.in.read();
-            if (choice == 'n')
+            System.out.println("exit - n");
+            try {
+                choice = (char) System.in.read();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            if (choice == 'n') {
                 break;
-
-
+            } else {
+                System.out.println("\n-------------------Add new pet-----------------------\n");
+            }
         }
     }
+
+    public void SearchByHumanName(String name) {
+
+        for (People people : peoples) {
+            if (people.firstName.equals(name)) {
+                System.out.println(people);
+            } else
+                System.out.println("Sorry we don't have this  visitor.");
+        }
+
+    }
+
 
     public void getVisitors() {
         for (People people : peoples) {

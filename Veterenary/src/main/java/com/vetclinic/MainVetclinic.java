@@ -9,7 +9,8 @@ public class MainVetclinic {
     public static void main(String[] args) throws IOException {
       Clinic clinic = new Clinic();
         clinic.addVisitors();
-        clinic.getVisitors();
+       // clinic.getVisitors();
+clinic.SearchByHumanName("Stas");
 
     }
 }

@@ -69,10 +69,10 @@ public class Animals {
 
     @Override
     public String toString() {
-        return  "type='" + type + '\'' +
+        return "type='" + type + '\'' +
                 ", breed='" + breed + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", weight=" + weight ;
+                ", weight=" + weight;
     }
 }

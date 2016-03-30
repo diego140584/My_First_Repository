@@ -4,7 +4,7 @@ package com.vetclinic;
  * Created by Stas on 28.03.2016.
  */
 public class People {
-    String firstName,lastName;
+    String firstName, lastName;
     Animals pet;
 
     public People(String firstName, String lastName, Animals pet) {

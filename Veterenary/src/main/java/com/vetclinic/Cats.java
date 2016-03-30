@@ -8,7 +8,8 @@ public class Cats extends Animals {
     private int age;
     private double weight;
 
-    Cats(String type, String breed, String name, int age, double weight){
-        super(type,breed,name,age,weight);
+    Cats(String type, String breed, String name, int age, double weight) {
+
+        super(type, breed, name, age, weight);
     }
 }

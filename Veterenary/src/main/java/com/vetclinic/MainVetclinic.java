@@ -1,5 +1,6 @@
 package com.vetclinic;
 
+import javax.swing.*;
 import java.io.IOException;
 
 /**
@@ -7,10 +8,6 @@ import java.io.IOException;
  */
 public class MainVetclinic {
     public static void main(String[] args) throws IOException {
-      Clinic clinic = new Clinic();
-        clinic.addVisitors();
-       // clinic.getVisitors();
-clinic.SearchByHumanName("Stas");
-
+       new Search();
     }
 }

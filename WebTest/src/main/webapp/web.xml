@@ -4,13 +4,13 @@
 <display-name>WebTest</display-name>
 
 <servlet>
-    <servlet-name>HelloServlet</servlet-name>
+    <servlet-name>WebTest</servlet-name>
     <servlet-class>com.WebTest.WebTest</servlet-class>
 
 </servlet>
 
 <servlet-mapping>
-<servlet-name>HelloServlet</servlet-name>
-<url-pattern>/servlet/HelloServlet</url-pattern>
+<servlet-name>WebTest</servlet-name>
+<url-pattern>/</url-pattern>
 </servlet-mapping>
 </web-app>

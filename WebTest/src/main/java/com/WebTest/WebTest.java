@@ -15,6 +15,7 @@ public class WebTest extends GenericServlet {
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 servletResponse.setContentType("text/html");
         PrintWriter writer = servletResponse.getWriter();
-        writer.println("This is my first Servlet");
+        writer.println("<B>This is my first Servlet");
+        writer.close();
     }
 }
